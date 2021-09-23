@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 40rem;
+  margin: 3rem auto;
+  max-width: 90%;
+}
