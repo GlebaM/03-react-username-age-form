@@ -21,9 +21,7 @@ const ModalPopup = (props) => {
         </div>
         <div className={styles.modal__bottom}>
           <p>{props.wrongInputStrings[1]}</p>
-          <Button type="submit" onClick={clickHandler}>
-            Close
-          </Button>
+          <Button type="submit">Close</Button>
         </div>
       </div>
     </div>
