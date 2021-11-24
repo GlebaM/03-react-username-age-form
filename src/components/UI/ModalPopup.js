@@ -12,9 +12,6 @@ const ModalPopup = (props) => {
     ) {
       props.addOnClose();
     }
-    // if (e.target.id === "modal" && e.currentTarget.id === "modal") {
-    //   props.addOnClose();
-    // }
   };
   return (
     <div id="modal" className={styles.modal} onClick={clickHandler}>

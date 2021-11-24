@@ -6,13 +6,13 @@ import Card from "./components/UI/Card";
 import ModalPopup from "./components/UI/ModalPopup";
 
 function App() {
-  const [people, setPeople] = useState([]);
+  const [users, setUsers] = useState([]);
   const [ageFlag, setAgeFlag] = useState(true);
   const [noInputFlag, setNoInputFlag] = useState(true);
 
   const addPerson = (person) => {
-    setPeople((people) => {
-      return [person, ...people];
+    setUsers((users) => {
+      return [person, ...users];
     });
   };
 
@@ -28,8 +28,6 @@ function App() {
   const resetInputs = () => {
     setNoInputFlag((noInputFlag) => (noInputFlag = true));
     setAgeFlag((ageFlag) => (ageFlag = true));
-    // setNoInputFlag(() => !noInputFlag);
-    // setAgeFlag(() => !ageFlag);
   };
 
   let content = "";
@@ -55,7 +53,7 @@ function App() {
     console.log("Wrong age input");
   };
 
-  console.log(people);
+  console.log(users);
   return (
     <header className={styles.header}>
       <Card>
@@ -66,7 +64,7 @@ function App() {
         />
       </Card>
       <Card className={styles[`items-container`]}>
-        <DetailsItems items={people} />
+        <DetailsItems items={users} />
       </Card>
       {content}
     </header>

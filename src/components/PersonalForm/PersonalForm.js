@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./PersonalForm.module.css";
 import Button from "../UI/Button/Button";
-// import PersonalForm from "./components/PersonalForm/PersonalForm";
 
 const PersonForm = (props) => {
   const [age, setAge] = useState("");
@@ -14,7 +13,7 @@ const PersonForm = (props) => {
       return props.onDetailsAbsence();
     }
 
-    if (age <= 0 || !Number.isInteger(Number(age))) {
+    if (age <= 0 || age.includes("e") || !Number.isInteger(Number(age))) {
       return props.onWrongInpNum();
     }
 
@@ -47,7 +46,7 @@ const PersonForm = (props) => {
 
         <label htmlFor="age">Age (Years)</label>
         <input
-          type="text"
+          type="number"
           id="age"
           name="age"
           value={age}
